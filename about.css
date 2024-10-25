@@ -1,0 +1,177 @@
+/* Dark Theme and Animation for the About Section */
+body {
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeInDown 1s ease;
+}
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Underline Animation for Links */
+.nav-links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.cta {
+  padding: 8px 20px;
+  background-color: #00bcd4;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+#about {
+  padding: 50px;
+  text-align: center;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #f9a825;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #b0bec5;
+  animation: textFadeIn 1.2s ease-in-out forwards;
+}
+
+/* Skills Cards */
+.skills {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: #263238;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 28%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: cardSlideIn 1s ease forwards;
+}
+
+.skill-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #ffb300;
+}
+
+.skill-card p {
+  font-size: 1em;
+  color: #cfd8dc;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

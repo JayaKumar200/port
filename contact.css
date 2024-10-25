@@ -1,0 +1,131 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+   
+
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeInDown 1s ease;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Underline Animation for Links */
+.nav-links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.cta {
+  padding: 8px 20px;
+  background-color: #00bcd4;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+
+.contact-section {
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+     margin-top: 7%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for scale and shadow */
+}
+
+.contact-section:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+}
+
+h2 {
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-section:hover h2 {
+    color: #00aaff; /* Change color on hover */
+}
+
+p {
+    margin: 5px 0;
+    transition: color 0.3s ease; /* Smooth color transition for paragraphs */
+}
+
+.contact-section:hover p {
+    color: #cccccc; /* Change text color on hover */
+}
+
+a {
+    color: #00aaff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #88ccff; /* Slightly lighter link color on hover */
+}

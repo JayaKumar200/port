@@ -1,0 +1,144 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeInDown 1s ease;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+.cta {
+  padding: 8px 20px;
+  background-color: #00bcd4;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+/* Underline Animation for Links */
+.nav-links a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #00bcd4;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill {
+    width: 80%; /* Adjust width as necessary */
+    margin: 20px 0;
+}
+
+.skill h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #333; /* Darker bar background */
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.progress {
+    background-color: #00ff7f; /* Bright green for progress */
+    height: 100%;
+    border-radius: 10px;
+    animation: grow 1s ease-in-out forwards;
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Adjust as per the inline style of each progress */
+    }
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .skill-container {
+        width: 100%;
+    }
+}
